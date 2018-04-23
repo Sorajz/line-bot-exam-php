@@ -3,9 +3,9 @@
 
 $access_token = 'Lq8WXzc6SGwxTKwGVCucVaZnPZbGrbm21DrgkUtirFuD2Gc8Nqdn/GUftn+DY1bjMAKf5ZSv3x0ghX3jizgKfsn/WrCndCsnAtzEes4YUsVJ2sC3jEAE9uG1Ckty7OWcAy5EFeNx3WuD8hNWBxTmkQdB04t89/1O/w1cDnyilFU=';
 
-$userId = 'Ufc802c8f8ed6ed72ea92b38f676a6837';
 
-$url = 'https://api.line.me/v2/bot/profile/'.$userId;
+
+$url = 'https://api.line.me/v2/bot/group/C23a8c2a40e2c284f421fcd152425c4a5/member/Ufc802c8f8ed6ed72ea92b38f676a6837';
 
 $headers = array('Authorization: Bearer ' . $access_token);
 
