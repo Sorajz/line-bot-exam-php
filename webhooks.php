@@ -16,10 +16,7 @@ if (!is_null($events['events'])) {
 		// Reply only when message sent is in 'text' format
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
-			$text1 = "ผมเป็นบอทเดิร์นครับ ผมยังหาคำสั่งให้ปริ้น displayname ไม่ได้ หาได้เเต่ userid คือ : ";
-			$text2 = $event['source']['userId'];
-			$textReplyMessage = "Bot ตอบกลับคุณเป็นข้อความ";
-                    	$replyData = new TextMessageBuilder($text1,$text2);
+			$text = $textReplyMessage = "ผมเป็นบอทเดิร์นครับ ผมยังหาคำสั่งให้ปริ้น displayname ไม่ได้ หาได้เเต่ userid คือ : ";
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 
@@ -48,7 +45,7 @@ if (!is_null($events['events'])) {
 			curl_close($ch);
 
 			echo $result . "\r\n";
-			$response = $bot->replyMessage($replyToken,$replyData);
+			
 		}
 	}
 }
