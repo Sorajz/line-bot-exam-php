@@ -13,8 +13,45 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 .w3-bar-block .w3-bar-item {padding: 16px}
 </style>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+<style>
+p {
+  text-align: center;
+  font-size: px;
+  margin-top:0px;
+}
+</style>
 </head>
 <body>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Sep 5, 2018 12:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+    
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+    
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML ="เหลือเวลา"+ hours + "ชั่วโมง "
+    + minutes + "นาที" + seconds + "วินาที";
+    
+    // If the count down is over, write some text 
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "ปิดรอบ";
+    }
+}, 1000);
+</script>
 
 
 <!-- Side Navigation -->
@@ -525,7 +562,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
       </div>    
     </div>
   </div>
-</div>
+  
 
 <!-- Overlay effect when opening the side navigation on small screens -->
 <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="Close Sidemenu" id="myOverlay"></div>
@@ -558,47 +595,75 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
  <hr>
 
  
- <div id="" class="container">
-		<div id="" class="card card-secondary ">
-			<div id="" class=" card-body">
+ <div id="" class=" card-body">
 				<div class="">
 					<div id="" class="row">
 						<div id="" class="col-md-6">
+						
+                            
 							<div>
-							<h3 class="text-center">ผลหวยรัฐบาล งวดวันที่ 2 พฤษพาคม 2561</h3>
+																<h3 class="text-center">ผลหวยรัฐบาล งวดวันที่ 2 พฤษพาคม 2561</h3>
 								<div>
-								<table class="table">
+																	<table class="table table-bordered">
 										<tbody class="">
 											<tr>
-												<td class="scope">รางวัลที่ 1</td>
-												<td class="text-center">248038</td>
+												<td class="text-center" >รางวัลที่ 1</td>
+                                                <td class="text-center">เลขท้าย 2 ตัว</td>
+                                                <td class="text-center">เลขหน้า 3 ตัว </td>
+                                                <td class="text-center">เลขท้าย 3 ตัว</td>
+									
 											</tr>										
-											<tr>
-												<td class="scope">เลขท้าย 2 ตัว</td>
+											<tr class="success">
+												<td class="text-center">248038</td>
 												<td class="text-center">85</td>
-											</tr>
-											<tr>
-												<td class="scope">เลขหน้า 3 ตัว <i>(2 รางวัล)</i></td>
 												<td class="text-center">980 , 527</td>
-											</tr>
-											<tr>
-												<td class="scope">เลขท้าย 3 ตัว <i>(2 รางวัล)</i></td>
 												<td class="text-center">225 , 602</td>
 											</tr>
 										</tbody>
 									</table>
 								</div>		
-							</div>				
+							</div>	
+                            	<div>
+								<h3 class="text-center">แทงหวย งวดวันที่ 4 พฤษภา 2561</h3>
+								<table class="table">
+
+  <tbody>
+    <tr>
+	<td>รัฐบาลเช้า งวดวันที่ 4 พฤษภา 2561 </td> 
+ 	<td class="success"><p id="demo"></td>
+    </tr>
+    <tr>
+      <td>รัฐบาลเที่ยง งวดวันที่ 4 พฤษภา 2561</td> 
+       	
+        <td class="active"><center>ปิดรับ</center></td>
+    </tr>
+    <tr>
+      <td>รัฐบาลบ่าย งวดวันที่ 4 พฤษภา 2561</td>
+      <td class="active"><center>ปิดรับ</center></td>
+    </tr>
+      <tr>
+      <td>รัฐบาลเย็น งวดวันที่ 4 พฤษภา 2561</td>
+      <td class="active"><center>ปิดรับ</center></td>
+    </tr>
+    <tr>
+    <td>
+    </td>
+    </tr>
+  </tbody>
+</table>
+								</ul>		
+							</div>	
 						</div>
+                        
 						<div id="" class="col-md-6">
 
 							<h3 class="text-center">อัตราจ่ายหวยรัฐบาล</h3>
 
 							<div class="">
 								<div class="table-responsive ">
-									<table class="table ">
-										<thead class="thead-dark">
-											<tr>
+									<table class="table  table-bordered">
+										<thead>
+											<tr class="active">
 												<th class="text-center">ประเภท</th>
 												<th class="text-center">จ่ายบาทละ</th>
 											</tr>
@@ -656,9 +721,6 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-
 <div id="Jane" class="w3-container person">
   <br>
 <img class="w3-round  w3-animate-top" src="/w3images/avatar3.png" style="width:20%;">
