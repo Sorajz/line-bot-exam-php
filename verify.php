@@ -1,8 +1,8 @@
 <?php
-$access_token = '3ALKAbKFoGuJyJnoDdn0HeyfbxLFtEXBKiC0lFeoNl/XbL4WhoCZzefp2n7UDuXaCWfErIDro07BnZNggJmXJChXTIlMPo8LRJ+n1LEgbRUaKehDkiCr5p5CakHrPX+gauOGX/R5bB2e5yi7xjnHDAdB04t89/1O/w1cDnyilFU=';
+$access_token = 'Lq8WXzc6SGwxTKwGVCucVaZnPZbGrbm21DrgkUtirFuD2Gc8Nqdn/GUftn+DY1bjMAKf5ZSv3x0ghX3jizgKfsn/WrCndCsnAtzEes4YUsVJ2sC3jEAE9uG1Ckty7OWcAy5EFeNx3WuD8hNWBxTmkQdB04t89/1O/w1cDnyilFU=';
 
 
-$url = 'https://api.line.me/v1/oauth/verify';
+$url = 'https://api.line.me/v2/bot/group/Cc3556c3448ced104db82e447835d05d5/member/U7fea73e3cb8f255226fce7f59af76ebd';
 
 $headers = array('Authorization: Bearer ' . $access_token);
 

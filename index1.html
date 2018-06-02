@@ -1,0 +1,1323 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!--w3s css-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>SeedSoft เเทงหวยออนไลน์</title>
+    <style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: dark;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: dark;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+li {
+    border-right: 1px solid #bbb;
+}
+
+li:last-child {
+    border-right: none;
+}
+#ph1{
+   
+    background: #73AD21;
+    padding: 20px; 
+    width: auto;
+    height: 400px;    
+}
+#ph2{
+   
+    background: #B0C4DE;
+    padding: 20px; 
+    width: auto;
+    height: 400px;    
+}
+</style>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("May 8, 2018 23:50:00").getTime();
+var countDownDate2 = new Date("May 8, 2018 22:00:00").getTime();
+var countDownDate3 = new Date("May 9, 2018 17:30:00").getTime();
+var countDownDate4 = new Date("May 8, 2018 17:30:00").getTime();
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+    
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+    var distance2 = countDownDate2 - now;
+	var distance3 = countDownDate3 - now;
+	var distance4 = countDownDate4 - now;
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+	
+	var days2 = Math.floor(distance2 / (1000 * 60 * 60 * 24));
+    var hours2 = Math.floor((distance2 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes2 = Math.floor((distance2 % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds2 = Math.floor((distance2 % (1000 * 60)) / 1000);
+	
+	var days3 = Math.floor(distance3 / (1000 * 60 * 60 * 24));
+    var hours3 = Math.floor((distance3 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes3 = Math.floor((distance3 % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds3 = Math.floor((distance3 % (1000 * 60)) / 1000);
+	
+	var days4 = Math.floor(distance3 / (1000 * 60 * 60 * 24));
+    var hours4 = Math.floor((distance3 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes4 = Math.floor((distance3 % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds4 = Math.floor((distance3 % (1000 * 60)) / 1000);
+    
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML ="เหลือเวลา"+ hours + "ชั่วโมง "
+    + minutes + "นาที" + seconds + "วินาที";
+	 document.getElementById("demo2").innerHTML ="เหลือเวลา"+ hours2 + "ชั่วโมง "
+    + minutes2 + "นาที" + seconds2 + "วินาที";
+	document.getElementById("demo3").innerHTML ="เหลือเวลา"+ hours2 + "ชั่วโมง "
+    + minutes2 + "นาที" + seconds2 + "วินาที";
+	document.getElementById("demo4").innerHTML ="เหลือเวลา"+ hours2 + "ชั่วโมง "
+    + minutes2 + "นาที" + seconds2 + "วินาที";
+	document.getElementById("demo5").innerHTML ="เหลือเวลา" + days3 +"วัน "+ hours3 + "ชั่วโมง "
+    + minutes3 + "นาที" + seconds3 + "วินาที";
+	
+	document.getElementById("demo6").innerHTML ="เหลือเวลา"+ hours4 + "ชั่วโมง "
+    + minutes4 + "นาที" + seconds4 + "วินาที";
+    
+    // If the count down is over, write some text 
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "ปิดรอบ";
+    }
+}, 1000);
+</script>
+  </head>
+  <body>
+  
+    <!--navbar-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light" >
+  <a class="navbar-brand" href="#"><font color="#FF0000">4SEEDSOFT</font></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class=" mr-auto nav nav-tabs">
+      <li class="nav-item">
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><i class="fa fa-home"></i> หน้าเเรก</font></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><i class="fa fa-money"></i> เเทงหวย</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false"><i class="fa fa-calendar-check-o"></i> ผลหวย</a>
+  </li>
+   <li class="nav-item">
+    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false"><i class="	fa fa-comments-o"></i> แนะนำระบบ</a>
+  </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="....." aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">ค้นหา</button>
+    </form>
+  </div>
+</nav>
+    <!--endnavbar-->
+    
+    <!--content-->
+
+<div class="tab-content" id="myTabContent">
+ <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+ <!-- Header -->
+<header class="w3-container w3-green w3-center" style="padding:128px 16px">
+  <h1 class="display-1">4SEEDSOFT</h1>
+  <p class="w3-xlarge">เว็บเเทงหวยออนไลน์</p>
+</header>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h3 >เว็บแทงหวยออนไลน์ 4SEEDSOFT</h3>
+      <h6 class="w3-text-grey">แทงหวย กับ 4SEEDSOFT ไม่ว่าจะเป็น หวยรัฐบาล หวยหุ้นไทย หรือ หวยหุ้นต่างประเทศ 2 ตัวจ่ายสูงสุดบาทละ 95 ฝากเงิน - ถอนเงินได้ตลอด 24 ชั่วโมง ปรับยอดภายใน 5 นาที รองรับการใช้งานบนมือถือ หรือ แท็บเล็ต ระบบแนะนำสมาฃิกรับฟรี 2% ติดต่อหรือสอบถามปัญหาได้ตลอด 24 ชั่วโมง สมัครสมาชิกฟรี</h6>
+<ul class="w3-text-grey">
+  <li>ฝากเงินขั้นตํ่า 100 บาท</li>
+  <li>ถอนเงินขั้นตํ่า 500 บาท</li>
+  <li>การฝากเงิน ต้องโอนผ่านชื่อบัญชีที่ระบุไว้ที่หน้าเว็บเท่านั้น </li>
+</ul>
+    </div>
+
+    <div class="w3-third w3-center">
+      รูปภาพโฆษณา
+    </div>
+  </div>
+</div>
+
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+<div id="" class="container">
+		
+			<h2 class="text-center">หวยรัฐบาล</h2>
+			<div id="" class=" card-body">
+				<div class="">
+					<div id="" class="row">
+						<div id="" class="col-md-6">
+							<div>
+								<h3 class="text-center">รายละเอียดหวยรัฐบาล</h3>
+								
+									<p>-ปิดรับเลข 15:00 น. ของวันหวยออก</p>
+									<p>-ยกเลิกเลข 3 ตัวล่าง ที่มี 4 รางวัล เปลี่ยนเป็น เลขหน้า 3 ตัว 2 รางวัล และ เลขท้าย 3 ตัว 2 รางวัล</p>
+										
+							</div>	
+							<div>
+																<h3 class="text-center">ผลหวยรัฐบาล งวดวันที่ 2 พฤษพาคม 2561</h3>
+								<div>
+																	<table class="table table-bordered">
+										<tbody class="">
+											<tr>
+												<td class="scope">รางวัลที่ 1</td>
+												<td class="text-center">248038</td>
+											</tr>										
+											<tr>
+												<td class="scope">เลขท้าย 2 ตัว</td>
+												<td class="text-center">85</td>
+											</tr>
+											<tr>
+												<td class="scope">เลขหน้า 3 ตัว <i>(2 รางวัล)</i></td>
+												<td class="text-center">980 , 527</td>
+											</tr>
+											<tr>
+												<td class="scope">เลขท้าย 3 ตัว <i>(2 รางวัล)</i></td>
+												<td class="text-center">225 , 602</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>		
+							</div>				
+						</div>
+						<div id="" class="col-md-6">
+
+							<h3 class="text-center">อัตราจ่ายหวยรัฐบาล</h3>
+
+							<div class="">
+								<div class="table-responsive ">
+									<table class="table  table-bordered">
+										<thead class="thead-green">
+											<tr>
+												<th class="text-center">ประเภท</th>
+												<th class="text-center">จ่ายบาทละ</th>
+											</tr>
+										</thead>
+										<tbody>
+																						<tr>
+												<td class="text-center">3 ตัวบนตรง</td>
+												
+												<td class="text-center">800</td>
+											</tr>
+																						<tr>
+												<td class="text-center">3 ตัวบนโต๊ด</td>
+												
+												<td class="text-center">130</td>
+											</tr>
+																						<tr>
+												<td class="text-center">2 ตัวบน</td>
+												
+												<td class="text-center">95</td>
+											</tr>
+																						<tr>
+												<td class="text-center">2 ตัวล่าง</td>
+												
+												<td class="text-center">95</td>
+											</tr>
+																						<tr>
+												<td class="text-center">วิ่งบน</td>
+												
+												<td class="text-center">3.3</td>
+											</tr>
+																						<tr>
+												<td class="text-center">วิ่งล่าง</td>
+												
+												<td class="text-center">4.6</td>
+											</tr>
+																						<tr>
+												<td class="text-center">เลขหน้า 3 ตัว</td>
+												
+												<td class="text-center">400</td>
+											</tr>
+																						<tr>
+												<td class="text-center">เลขท้าย 3 ตัว</td>
+												
+												<td class="text-center">400</td>
+											</tr>
+																					</tbody>
+									</table>
+
+								</div>	
+								
+							</div>	
+							
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	
+</div>
+<!-- trid Grid -->
+<div class="w3-row-padding w3-light-white w3-padding-64 w3-container">
+<div id="" class="container ">
+			
+				
+				<h2 class="text-center">หวยหุ้น</h2>
+				
+				<div class="card-body">
+				<div id="" class="row">
+					<div id="" class="col-md-4">
+
+						<h3 class="text-center">อัตราจ่ายหวยหุ้น</h3>
+
+		
+						<div class="">
+							<div class=" table-responsive">
+								<table class="table table-bordered ">
+									<thead class="thead-green">
+										<tr>
+											<th class="text-center">ประเภท</th>
+											<th class="text-center">จ่ายบาทละ</th>
+										</tr>
+									</thead>
+									<tbody>
+																				<tr>
+											<td class="text-center">3 ตัวบนตรง</td>										
+											<td class="text-center">750</td>
+										</tr>
+																				<tr>
+											<td class="text-center">3 ตัวบนโต๊ด</td>										
+											<td class="text-center">120</td>
+										</tr>
+																				<tr>
+											<td class="text-center">2 ตัวบน</td>										
+											<td class="text-center">95</td>
+										</tr>
+																				<tr>
+											<td class="text-center">2 ตัวล่าง</td>										
+											<td class="text-center">95</td>
+										</tr>
+																				<tr>
+											<td class="text-center">วิ่งบน</td>										
+											<td class="text-center">3.3</td>
+										</tr>
+																				<tr>
+											<td class="text-center">วิ่งล่าง</td>										
+											<td class="text-center">4.6</td>
+										</tr>
+																			</tbody>
+								</table>
+								<div class="clearfix"></div>
+							</div>	
+							
+						</div>	
+						
+
+					</div>
+
+					<div id="" class="col-md-4">
+						<h3 class="text-center">รอบเวลาหวยหุ้น</h3>	
+						<div class="">
+							<div class=" table-responsive  ">
+								<table class="table  table-bordered">
+									<thead class="thead-green">
+										<tr>
+											<th class="text-center">ประเภท</th>
+											<th class="text-center">ปิดรับ</th>
+										</tr>
+									</thead>
+									<tbody>
+																				<tr>
+											<td class="text-center">นิเคอิเช้า</td>
+											<td class="text-center">09:20 น.</td>
+										</tr>
+																				<tr>
+											<td class="text-center">ไทยเช้า</td>
+											<td class="text-center">09:40 น.</td>
+										</tr>
+																				<tr>
+											<td class="text-center">จีนเช้า</td>
+											<td class="text-center">10:00 น.</td>
+										</tr>
+																				<tr>
+											<td class="text-center">ฮั่งเส็งเช้า</td>
+											<td class="text-center">10:50 น.</td>
+										</tr>
+																				<tr>
+											<td class="text-center">ไต้หวัน</td>
+											<td class="text-center">11:30 น.</td>
+										</tr>
+																				<tr>
+											<td class="text-center">ไทยเที่ยง</td>
+											<td class="text-center">12:00 น.</td>
+										</tr>
+																				<tr>
+											<td class="text-center">เกาหลี</td>
+											<td class="text-center">12:30 น.</td>
+										</tr>
+																				<tr>
+											<td class="text-center">นิเคอิบ่าย</td>
+											<td class="text-center">12:50 น.</td>
+										</tr>
+																				<tr>
+											<td class="text-center">จีนบ่าย</td>
+											<td class="text-center">13:30 น.</td>
+										</tr>
+																				<tr>
+											<td class="text-center">ไทยบ่าย</td>
+											<td class="text-center">14:00 น.</td>
+										</tr>
+																				<tr>
+											<td class="text-center">ฮังเส็งบ่าย</td>
+											<td class="text-center">14:50 น.</td>
+										</tr>
+																				<tr>
+											<td class="text-center">สิงคโปร์</td>
+											<td class="text-center">15:30 น.</td>
+										</tr>
+																				<tr>
+											<td class="text-center">ไทยเย็น</td>
+											<td class="text-center">16:10 น.</td>
+										</tr>
+																				<tr>
+											<td class="text-center">อินเดีย</td>
+											<td class="text-center">16:30 น.</td>
+										</tr>
+																				<tr>
+											<td class="text-center">รัสเซีย</td>
+											<td class="text-center">22:00 น.</td>
+										</tr>
+																				<tr>
+											<td class="text-center">เยอรมัน</td>
+											<td class="text-center">22:00 น.</td>
+										</tr>
+																				<tr>
+											<td class="text-center">อังกฤษ</td>
+											<td class="text-center">22:00 น.</td>
+										</tr>
+																				<tr>
+											<td class="text-center">ดาวโจนส์</td>
+											<td class="text-center">23:50 น.</td>
+										</tr>
+																			</tbody>
+								</table>
+								
+							</div>	
+							
+						</div>	
+					</div>
+
+
+					<div class="col-md-4">
+												<h3 class="text-center">ผลหวยหุ้น วันที่ 8 พฤษพาคม 61</h3>
+						<div class="">
+														<div class="table-responsive">
+								<table class="table table-striped table-hover table-bordered">
+									<thead class="thead-green ">
+										<tr>
+											<!-- <th>งวดวันที่</th> -->
+											<th class="text-center">ประเภท</th>
+											<th class="text-center">3ตัวบน</th>
+											<th class="text-center">2ตัวล่าง</th>
+											
+										</tr>		
+									</thead>	
+									<tbody>
+											
+									
+										<tr>
+											<!-- <th scope="row">8 พฤษพาคม 2561</th> -->
+											<td class="text-center" scope="row">นิเคอิเช้า</td>
+											<td class="text-center">642</td>
+											<td class="text-center">26</td>
+											
+										</tr>
+									
+											
+									
+										<tr>
+											<!-- <th scope="row">8 พฤษพาคม 2561</th> -->
+											<td class="text-center" scope="row">ไทยเช้า</td>
+											<td class="text-center">782</td>
+											<td class="text-center">98</td>
+											
+										</tr>
+									
+											
+									
+										<tr>
+											<!-- <th scope="row">8 พฤษพาคม 2561</th> -->
+											<td class="text-center" scope="row">จีนเช้า</td>
+											<td class="text-center">571</td>
+											<td class="text-center">20</td>
+											
+										</tr>
+									
+											
+									
+										<tr>
+											<!-- <th scope="row">8 พฤษพาคม 2561</th> -->
+											<td class="text-center" scope="row">ฮั่งเส็งเช้า</td>
+											<td class="text-center">595</td>
+											<td class="text-center">69</td>
+											
+										</tr>
+									
+											
+									
+										<tr>
+											<!-- <th scope="row">8 พฤษพาคม 2561</th> -->
+											<td class="text-center" scope="row">ไต้หวัน</td>
+											<td class="text-center">138</td>
+											<td class="text-center">47</td>
+											
+										</tr>
+									
+											
+									
+										<tr>
+											<!-- <th scope="row">8 พฤษพาคม 2561</th> -->
+											<td class="text-center" scope="row">ไทยเที่ยง</td>
+											<td class="text-center">292</td>
+											<td class="text-center">88</td>
+											
+										</tr>
+									
+											
+									
+										<tr>
+											<!-- <th scope="row">8 พฤษพาคม 2561</th> -->
+											<td class="text-center" scope="row">เกาหลี</td>
+											<td class="text-center">545</td>
+											<td class="text-center">89</td>
+											
+										</tr>
+									
+											
+									
+										<tr>
+											<!-- <th scope="row">8 พฤษพาคม 2561</th> -->
+											<td class="text-center" scope="row">นิเคอิบ่าย</td>
+											<td class="text-center">869</td>
+											<td class="text-center">53</td>
+											
+										</tr>
+									
+											
+									
+										<tr>
+											<!-- <th scope="row">8 พฤษพาคม 2561</th> -->
+											<td class="text-center" scope="row">จีนบ่าย</td>
+											<td class="text-center">780</td>
+											<td class="text-center">29</td>
+											
+										</tr>
+									
+											
+									
+										<tr>
+											<!-- <th scope="row">8 พฤษพาคม 2561</th> -->
+											<td class="text-center" scope="row">ไทยบ่าย</td>
+											<td class="text-center">222</td>
+											<td class="text-center">58</td>
+											
+										</tr>
+									
+											
+									
+										<tr>
+											<!-- <th scope="row">8 พฤษพาคม 2561</th> -->
+											<td class="text-center" scope="row">ฮังเส็งบ่าย</td>
+											<td class="text-center">281</td>
+											<td class="text-center">55</td>
+											
+										</tr>
+									
+											
+									
+										<tr>
+											<!-- <th scope="row">8 พฤษพาคม 2561</th> -->
+											<td class="text-center" scope="row">ไทยเย็น</td>
+											<td class="text-center"><span class="">รอผล</span></td>
+											<td class="text-center"><span class="">รอผล</span></td>
+											
+										</tr>
+									
+											
+									
+										<tr>
+											<!-- <th scope="row">8 พฤษพาคม 2561</th> -->
+											<td class="text-center" scope="row">อินเดีย</td>
+											<td class="text-center"><span class="">รอผล</span></td>
+											<td class="text-center"><span class="">รอผล</span></td>
+											
+										</tr>
+									
+											
+									
+										<tr>
+											<!-- <th scope="row">8 พฤษพาคม 2561</th> -->
+											<td class="text-center" scope="row">ฮานอย</td>
+											<td class="text-center"><span class="">รอผล</span></td>
+											<td class="text-center"><span class="">รอผล</span></td>
+											
+										</tr>
+									
+											
+									
+										<tr>
+											<!-- <th scope="row">8 พฤษพาคม 2561</th> -->
+											<td class="text-center" scope="row">รัสเซีย</td>
+											<td class="text-center"><span class="">รอผล</span></td>
+											<td class="text-center"><span class="">รอผล</span></td>
+											
+										</tr>
+									
+											
+									
+										<tr>
+											<!-- <th scope="row">8 พฤษพาคม 2561</th> -->
+											<td class="text-center" scope="row">เยอรมัน</td>
+											<td class="text-center"><span class="">รอผล</span></td>
+											<td class="text-center"><span class="">รอผล</span></td>
+											
+										</tr>
+									
+											
+									
+										<tr>
+											<!-- <th scope="row">8 พฤษพาคม 2561</th> -->
+											<td class="text-center" scope="row">อังกฤษ</td>
+											<td class="text-center"><span class="">รอผล</span></td>
+											<td class="text-center"><span class="">รอผล</span></td>
+											
+										</tr>
+									
+											
+									
+										<tr>
+											<!-- <th scope="row">8 พฤษพาคม 2561</th> -->
+											<td class="text-center" scope="row">ดาวโจนส์</td>
+											<td class="text-center"><span class="">รอผล</span></td>
+											<td class="text-center"><span class="">รอผล</span></td>
+											
+										</tr>
+									
+																	</tbody>
+										
+								</table>
+							</div>
+						</div>					
+					</div>
+
+				</div>
+				</div>
+			</div>
+	
+</div>
+<!-- foot -->
+<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+    <h1 class="w3-margin w3-xlarge"></h1>
+ </div>
+</div>
+
+<!---------------------------------->
+<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+<div id="" class="container">
+<h3 class="text-center">แทงหวยรัฐบาล งวดวันที่ 2 พฤษภาคม 2561</h3>
+<table class="table">
+  <tbody>
+    <tr>
+	<td>รัฐบาล งวดวันที่ 2 พฤษภาคม 2561 ปิดรับเวลา 15:00 น.</td> 
+ 	<td class="active"><center>ปิดรับ</center></td>
+    <td></td>
+    </tr>
+    <tr>
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+<div class="w3-row-padding w3-light-white w3-padding-64 w3-container">
+<div id="" class="container">
+<h3 class="text-center">แทงหวยหุ้นไทย งวดวันที่ 8 พฤษภาคม 2561</h3>
+<table class="table">
+  <tbody>
+    <tr>
+	<td>รัฐบาลเช้า งวดวันที่ 8 พฤษภาคม 2561 ปิดรับเวลา 9:40 น.</td> 
+ 	<td class="active"><center>ปิดรับ</center></td>
+    </tr>
+    <tr>
+      <td>รัฐบาลเที่ยง งวดวันที่ 8 พฤษภาคม 2561 ปิดรับเวลา 12:00 น.</td> 
+       	
+        <td class="active"><center>ปิดรับ</center></td>
+    </tr>
+    <tr>
+      <td>รัฐบาลบ่าย งวดวันที่ 8 พฤษภาคม 2561 ปิดรับเวลา 14:00 น.</td>
+      <td class="active"><center>ปิดรับ</center></td>
+    </tr>
+      <tr>
+      <td>รัฐบาลเย็น งวดวันที่ 8 พฤษภาคม 2561 ปิดรับเวลา 16:10 น.</td>
+      <td class="active"><center>ปิดรับ</center></td>
+    </tr>
+   <tr>
+    <td></td> 
+    <td></td> 
+    
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+<div id="" class="container">
+<h3 class="text-center">แทงหวยหุ้นต่างประเทศ งวดวันที่ 8 พฤษภาคม 2561</h3>
+<table class="table">
+  <tbody>
+    <tr>
+	<td>หวยหุ้นนิเคอิเช้า งวดวันที่ 8 พฤษภาคม 2561 ปิดรับเวลา 9:40 น.</td> 
+ 	<td class="active"><center>ปิดรับ</center></td>
+    </tr>
+    <tr>
+      <td>หวยหุ้นจีนเข้า งวดวันที่ 8 พฤษภาคม 2561 ปิดรับเวลา 10:00 น.</td> 
+       	
+        <td class="active"><center>ปิดรับ</center></td>
+    </tr>
+    <tr>
+      <td>หวยหุ้นฮังเส็งเข้า งวดวันที่ 8 พฤษภาคม 2561 ปิดรับเวลา 10:50 น.</td>
+      <td class="active"><center>ปิดรับ</center></td>
+    </tr>
+      <tr>
+      <td>หวยหุ้นไต้หวัน งวดวันที่ 8 พฤษภาคม 2561 ปิดรับเวลา 11:30 น.</td>
+      <td class="active"><center>ปิดรับ</center></td>
+    </tr>
+    <tr>
+      <td>หวยหุ้นเกาหลี งวดวันที่ 8 พฤษภาคม 2561 ปิดรับเวลา 11:30 น.</td>
+      <td class="active"><center>ปิดรับ</center></td>
+    </tr>
+    <td>หวยหุ้นนิเคบ่าย งวดวันที่ 8 พฤษภาคม 2561 ปิดรับเวลา 9:40 น.</td> 
+ 	<td class="active"><center>ปิดรับ</center></td>
+    </tr>
+    <tr>
+      <td>หวยหุ้นจีนบ่าย งวดวันที่ 8 พฤษภาคม 2561 ปิดรับเวลา 10:00 น.</td> 
+       	
+        <td class="active"><center>ปิดรับ</center></td>
+    </tr>
+    <tr>
+      <td>หวยหุ้นฮังเส็งบ่าย งวดวันที่ 8 พฤษภาคม 2561 ปิดรับเวลา 10:50 น.</td>
+      <td class="active"><center>ปิดรับ</center></td>
+    </tr>
+     <tr>
+      <td>หวยหุ้นอินเดีย งวดวันที่ 8 พฤษภาคม 2561 ปิดรับเวลา 10:50 น.</td>
+      <td class="active"><center>ปิดรับ</center></td>
+    </tr>
+       <tr>
+      <td>หวยหุ้นรัชเชีย งวดวันที่ 8 พฤษภาคม 2561 ปิดรับเวลา 22:00 น.</td>
+      <td class="active"><center><p id="demo3"></center></td>
+    </tr>
+    </tr>
+       <tr>
+      <td>หวยหุ้นเยอรมัน งวดวันที่ 8 พฤษภาคม 2561 ปิดรับเวลา 22:00 น.</td>
+      <td class="active"><center><p id="demo4"></center></td>
+    </tr>
+    </tr>
+       <tr>
+      <td>หวยหุ้นอังกฤษ งวดวันที่ 8 พฤษภาคม 2561 ปิดรับเวลา 22:00 น.</td>
+      <td class="active"><center><p id="demo2"></center></td>
+    </tr>
+    </tr>
+       <tr>
+      <td>หวยหุ้นดาวโจร งวดวันที่ 8 พฤษภาคม 2561 ปิดรับเวลา 23:50 น.</td>
+      <td class="active"><center><p id="demo"></center></td>
+    </tr>
+   <tr>
+    <td></td> 
+    <td></td> 
+    
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+<div class="w3-row-padding w3-light-white w3-padding-64 w3-container">
+<div id="" class="container">
+<h3 class="text-center">แทงหวยมาเลย์ งวดวันที่ 9 พฤษภาคม 2561</h3>
+<table class="table">
+  <tbody>
+    <tr>
+	<td>หวยมาเลย์ งวดวันที่ 9 พฤษภาคม 2561 ปิดรับเวลา 9:40 น.</td> 
+ 	<td class="active"><center><p id="demo5"></center></td>
+    </tr>
+    
+   <tr>
+    <td></td> 
+    <td></td> 
+    
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+<div id="" class="container">
+<h3 class="text-center">แทงหวยเวียดนาม งวดวันที่ 8 พฤษภาคม 2561</h3>
+<table class="table">
+  <tbody>
+    <tr>
+	<td>หวยฮานอย งวดวันที่ 8 พฤษภาคม 2561 ปิดรับเวลา 17:30 น.</td> 
+ 	<td class="active"><center><p id="demo6"></center></td>
+    </tr>
+    
+   <tr>
+    <td></td> 
+    <td></td> 
+    
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+
+</div>
+<!-------------------------------------->
+  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+  
+  <section id="content" class="animated content" style="min-height: 924px;">
+            
+  <div class="wrapper">
+	<div class="container">
+
+		<header class="">
+			<h2>ตารางผลหวยหุ้นไทย และ หวยหุ้นต่างประเทศ</h2>
+		</header>
+	<div class="card card-body ">
+					<div class="table-responsive">
+			<table class="table table-striped table-hover table-bordered">
+				<thead class="thead-green">
+					<tr>
+						<th scope="col">งวดวันที่</th>
+						<th scope="col" class="text-center">ประเภท</th>
+						<th scope="col" class="text-center">3ตัวบน</th>
+						<th scope="col" class="text-center">2ตัวล่าง</th>						
+					</tr>		
+				</thead>	
+				<tbody>
+						
+				
+					<tr>
+						<th scope="row">9 พฤษพาคม 2561</th>
+						<td class="text-center">มาเลย์</td>
+						<td class="text-center"><span class="text-warning">รอผล</span></td>
+						<td class="text-center"><span class="text-warning">รอผล</span></td>						
+					</tr>
+				
+						
+				
+					<tr>
+						<th scope="row">8 พฤษพาคม 2561</th>
+						<td class="text-center">นิเคอิเช้า</td>
+						<td class="text-center">642</td>
+						<td class="text-center">26</td>						
+					</tr>
+				
+						
+				
+					<tr>
+						<th scope="row">8 พฤษพาคม 2561</th>
+						<td class="text-center">ไทยเช้า</td>
+						<td class="text-center">782</td>
+						<td class="text-center">98</td>						
+					</tr>
+				
+						
+				
+					<tr>
+						<th scope="row">8 พฤษพาคม 2561</th>
+						<td class="text-center">จีนเช้า</td>
+						<td class="text-center">571</td>
+						<td class="text-center">20</td>						
+					</tr>
+				
+						
+				
+					<tr>
+						<th scope="row">8 พฤษพาคม 2561</th>
+						<td class="text-center">ฮั่งเส็งเช้า</td>
+						<td class="text-center">595</td>
+						<td class="text-center">69</td>						
+					</tr>
+				
+						
+				
+					<tr>
+						<th scope="row">8 พฤษพาคม 2561</th>
+						<td class="text-center">ไต้หวัน</td>
+						<td class="text-center">138</td>
+						<td class="text-center">47</td>						
+					</tr>
+				
+						
+				
+					<tr>
+						<th scope="row">8 พฤษพาคม 2561</th>
+						<td class="text-center">ไทยเที่ยง</td>
+						<td class="text-center">292</td>
+						<td class="text-center">88</td>						
+					</tr>
+				
+						
+				
+					<tr>
+						<th scope="row">8 พฤษพาคม 2561</th>
+						<td class="text-center">เกาหลี</td>
+						<td class="text-center">545</td>
+						<td class="text-center">89</td>						
+					</tr>
+				
+						
+				
+					<tr>
+						<th scope="row">8 พฤษพาคม 2561</th>
+						<td class="text-center">นิเคอิบ่าย</td>
+						<td class="text-center">869</td>
+						<td class="text-center">53</td>						
+					</tr>
+				
+						
+				
+					<tr>
+						<th scope="row">8 พฤษพาคม 2561</th>
+						<td class="text-center">จีนบ่าย</td>
+						<td class="text-center">780</td>
+						<td class="text-center">29</td>						
+					</tr>
+				
+						
+				
+					<tr>
+						<th scope="row">8 พฤษพาคม 2561</th>
+						<td class="text-center">ไทยบ่าย</td>
+						<td class="text-center">222</td>
+						<td class="text-center">58</td>						
+					</tr>
+				
+						
+				
+					<tr>
+						<th scope="row">8 พฤษพาคม 2561</th>
+						<td class="text-center">ฮังเส็งบ่าย</td>
+						<td class="text-center">281</td>
+						<td class="text-center">55</td>						
+					</tr>
+				
+						
+				
+					<tr>
+						<th scope="row">8 พฤษพาคม 2561</th>
+						<td class="text-center">ไทยเย็น</td>
+						<td class="text-center"><span class="text-warning">รอผล</span></td>
+						<td class="text-center"><span class="text-warning">รอผล</span></td>						
+					</tr>
+				
+						
+				
+					<tr>
+						<th scope="row">8 พฤษพาคม 2561</th>
+						<td class="text-center">อินเดีย</td>
+						<td class="text-center"><span class="text-warning">รอผล</span></td>
+						<td class="text-center"><span class="text-warning">รอผล</span></td>						
+					</tr>
+				
+						
+				
+					<tr>
+						<th scope="row">8 พฤษพาคม 2561</th>
+						<td class="text-center">ฮานอย</td>
+						<td class="text-center"><span class="text-warning">รอผล</span></td>
+						<td class="text-center"><span class="text-warning">รอผล</span></td>						
+					</tr>
+				
+						
+				
+					<tr>
+						<th scope="row">8 พฤษพาคม 2561</th>
+						<td class="text-center">อังกฤษ</td>
+						<td class="text-center"><span class="text-warning">รอผล</span></td>
+						<td class="text-center"><span class="text-warning">รอผล</span></td>						
+					</tr>
+				
+						
+				
+					<tr>
+						<th scope="row">8 พฤษพาคม 2561</th>
+						<td class="text-center">เยอรมัน</td>
+						<td class="text-center"><span class="text-warning">รอผล</span></td>
+						<td class="text-center"><span class="text-warning">รอผล</span></td>						
+					</tr>
+				
+						
+				
+					<tr>
+						<th scope="row">8 พฤษพาคม 2561</th>
+						<td class="text-center">รัสเซีย</td>
+						<td class="text-center"><span class="text-warning">รอผล</span></td>
+						<td class="text-center"><span class="text-warning">รอผล</span></td>						
+					</tr>
+				
+						
+				
+					<tr>
+						<th scope="row">8 พฤษพาคม 2561</th>
+						<td class="text-center">ดาวโจนส์</td>
+						<td class="text-center"><span class="text-warning">รอผล</span></td>
+						<td class="text-center"><span class="text-warning">รอผล</span></td>						
+					</tr>
+				
+						
+				
+					<tr>
+						<th scope="row">7 พฤษพาคม 2561</th>
+						<td class="text-center">นิเคอิเช้า</td>
+						<td class="text-center">214</td>
+						<td class="text-center">64</td>						
+					</tr>
+				
+						
+				
+					<tr>
+						<th scope="row">7 พฤษพาคม 2561</th>
+						<td class="text-center">ไทยเช้า</td>
+						<td class="text-center">654</td>
+						<td class="text-center">67</td>						
+					</tr>
+				
+						
+				
+					<tr>
+						<th scope="row">7 พฤษพาคม 2561</th>
+						<td class="text-center">จีนเช้า</td>
+						<td class="text-center">863</td>
+						<td class="text-center">44</td>						
+					</tr>
+				
+						
+				
+					<tr>
+						<th scope="row">7 พฤษพาคม 2561</th>
+						<td class="text-center">ฮั่งเส็งเช้า</td>
+						<td class="text-center">763</td>
+						<td class="text-center">13</td>						
+					</tr>
+				
+						
+				
+					<tr>
+						<th scope="row">7 พฤษพาคม 2561</th>
+						<td class="text-center">ไต้หวัน</td>
+						<td class="text-center">491</td>
+						<td class="text-center">54</td>						
+					</tr>
+				
+						
+				
+					<tr>
+						<th scope="row">7 พฤษพาคม 2561</th>
+						<td class="text-center">ไทยเที่ยง</td>
+						<td class="text-center">317</td>
+						<td class="text-center">30</td>						
+					</tr>
+				
+						
+				
+					<tr>
+						<th scope="row">7 พฤษพาคม 2561</th>
+						<td class="text-center">เกาหลี</td>
+						<td class="text-center"><span class="text-danger">ยกเลิก</span></td>
+						<td class="text-center"><span class="text-danger">ยกเลิก</span></td>						
+					</tr>
+				
+						
+				
+					<tr>
+						<th scope="row">7 พฤษพาคม 2561</th>
+						<td class="text-center">นิเคอิบ่าย</td>
+						<td class="text-center">716</td>
+						<td class="text-center">62</td>						
+					</tr>
+				
+						
+				
+					<tr>
+						<th scope="row">7 พฤษพาคม 2561</th>
+						<td class="text-center">จีนบ่าย</td>
+						<td class="text-center">651</td>
+						<td class="text-center">32</td>						
+					</tr>
+				
+						
+				
+					<tr>
+						<th scope="row">7 พฤษพาคม 2561</th>
+						<td class="text-center">ไทยบ่าย</td>
+						<td class="text-center">299</td>
+						<td class="text-center">12</td>						
+					</tr>
+				
+						
+				
+					<tr>
+						<th scope="row">7 พฤษพาคม 2561</th>
+						<td class="text-center">ฮังเส็งบ่าย</td>
+						<td class="text-center">426</td>
+						<td class="text-center">76</td>						
+					</tr>
+				
+						
+				
+					<tr>
+						<th scope="row">7 พฤษพาคม 2561</th>
+						<td class="text-center">ไทยเย็น</td>
+						<td class="text-center">980</td>
+						<td class="text-center">07</td>						
+					</tr>
+				
+						
+				
+					<tr>
+						<th scope="row">7 พฤษพาคม 2561</th>
+						<td class="text-center">อินเดีย</td>
+						<td class="text-center">814</td>
+						<td class="text-center">76</td>						
+					</tr>
+				
+						
+				
+					<tr>
+						<th scope="row">7 พฤษพาคม 2561</th>
+						<td class="text-center">ฮานอย</td>
+						<td class="text-center">664</td>
+						<td class="text-center">22</td>						
+					</tr>
+				
+						
+				
+					<tr>
+						<th scope="row">7 พฤษพาคม 2561</th>
+						<td class="text-center">อังกฤษ</td>
+						<td class="text-center"><span class="text-danger">ยกเลิก</span></td>
+						<td class="text-center"><span class="text-danger">ยกเลิก</span></td>						
+					</tr>
+				
+						
+				
+					<tr>
+						<th scope="row">7 พฤษพาคม 2561</th>
+						<td class="text-center">เยอรมัน</td>
+						<td class="text-center">814</td>
+						<td class="text-center">54</td>						
+					</tr>
+				
+						
+				
+					<tr>
+						<th scope="row">7 พฤษพาคม 2561</th>
+						<td class="text-center">รัสเซีย</td>
+						<td class="text-center">616</td>
+						<td class="text-center">94</td>						
+					</tr>
+				
+						
+				
+					<tr>
+						<th scope="row">7 พฤษพาคม 2561</th>
+						<td class="text-center">ดาวโจนส์</td>
+						<td class="text-center">732</td>
+						<td class="text-center">81</td>						
+					</tr>
+				
+						
+				
+					<tr>
+						<th scope="row">6 พฤษพาคม 2561</th>
+						<td class="text-center">ฮานอย</td>
+						<td class="text-center">238</td>
+						<td class="text-center">85</td>						
+					</tr>
+				
+						
+				
+					<tr>
+						<th scope="row">6 พฤษพาคม 2561</th>
+						<td class="text-center">มาเลย์</td>
+						<td class="text-center">935</td>
+						<td class="text-center">13</td>						
+					</tr>
+				
+						
+				
+					<tr>
+						<th scope="row">5 พฤษพาคม 2561</th>
+						<td class="text-center">ฮานอย</td>
+						<td class="text-center">482</td>
+						<td class="text-center">89</td>						
+					</tr>
+				
+						
+				
+					<tr>
+						<th scope="row">5 พฤษพาคม 2561</th>
+						<td class="text-center">มาเลย์</td>
+						<td class="text-center">326</td>
+						<td class="text-center">00</td>						
+					</tr>
+				
+						
+				
+					<tr>
+						<th scope="row">4 พฤษพาคม 2561</th>
+						<td class="text-center">จีนเช้า</td>
+						<td class="text-center">496</td>
+						<td class="text-center">34</td>						
+					</tr>
+				
+						
+				
+					<tr>
+						<th scope="row">4 พฤษพาคม 2561</th>
+						<td class="text-center">เกาหลี</td>
+						<td class="text-center">834</td>
+						<td class="text-center">87</td>						
+					</tr>
+				
+						
+				
+					<tr>
+						<th scope="row">4 พฤษพาคม 2561</th>
+						<td class="text-center">จีนบ่าย</td>
+						<td class="text-center">619</td>
+						<td class="text-center">43</td>						
+					</tr>
+				
+						
+				
+					<tr>
+						<th scope="row">4 พฤษพาคม 2561</th>
+						<td class="text-center">อินเดีย</td>
+						<td class="text-center">538</td>
+						<td class="text-center">76</td>						
+					</tr>
+				
+						
+				
+					<tr>
+						<th scope="row">4 พฤษพาคม 2561</th>
+						<td class="text-center">ฮานอย</td>
+						<td class="text-center">201</td>
+						<td class="text-center">67</td>						
+					</tr>
+				
+						
+				
+					<tr>
+						<th scope="row">4 พฤษพาคม 2561</th>
+						<td class="text-center">รัสเซีย</td>
+						<td class="text-center">122</td>
+						<td class="text-center">40</td>						
+					</tr>
+				
+						
+				
+					<tr>
+						<th scope="row">4 พฤษพาคม 2561</th>
+						<td class="text-center">อังกฤษ</td>
+						<td class="text-center">714</td>
+						<td class="text-center">45</td>						
+					</tr>
+				
+						
+				
+					<tr>
+						<th scope="row">4 พฤษพาคม 2561</th>
+						<td class="text-center">เยอรมัน</td>
+						<td class="text-center">960</td>
+						<td class="text-center">45</td>						
+					</tr>
+				
+						
+				
+					<tr>
+						<th scope="row">4 พฤษพาคม 2561</th>
+						<td class="text-center">ดาวโจนส์</td>
+						<td class="text-center">251</td>
+						<td class="text-center">36</td>						
+					</tr>
+				
+							</tbody>
+					
+			</table>
+		</div>
+	</div>
+
+
+	</div>
+</div>
+</section>
+  
+ </div>
+    
+</div>
+    <!--end con-->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  </body>
+</html>
