@@ -26,7 +26,7 @@ if (!is_null($events['events'])) {
 			curl_setopt($chprofile, CURLOPT_FOLLOWLOCATION, 1);
 			$resultprofile = curl_exec($chprofile);
 			curl_close($chprofile);
-			$displayname = $resultprofile["displayName"];
+			$displayname = json_decode($resultprofile, true);
 			if($event['message']['text'] == 'ไอดี') {
 				$text = $event['source']['userId'];
 			}else{
@@ -39,7 +39,7 @@ if (!is_null($events['events'])) {
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
-				'text' => $text
+				'text' => $displayname
 			];
 
 			// Make a POST Request to Messaging API to reply to sender
