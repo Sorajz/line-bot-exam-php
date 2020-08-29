@@ -56,7 +56,7 @@ echo "OK 1 person <br>";
 }else{
 echo "OK ALL<br>";
 
-if($_POST) {
+if(!is_null($_POST['productN'])) {
 	$productName 		= $_POST['productN'];
 	$categoryName		=$_POST['categoryN'];
 	$sendnotify = "สวัสดีครับตอนนี้มี  รายการใหม่ให้เสนอ"."\r\n"."ชื่อสินค้า:".$productName."\r\n"."ประเภท:".$categoryName."\r\n";
@@ -86,7 +86,7 @@ $messages = [
 			echo $result . "\r\n";
 	$valid['success'] = true;
 	$valid['messages'] = "Successfully Notify Line ALL";
-echo "message end";
+echo "message all end";
 	echo json_encode($valid);
 
  }
