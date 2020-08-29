@@ -17,22 +17,19 @@ if (!is_null($events['events'])) {
 			$userida = $event['source']['userId'];			
 			// Get text sent
 			$urlprofile = 'https://api.line.me/v2/bot/profile/'.$userida;
-			$headersprofile = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+			$headersprofile = array('Authorization: Bearer ' . $access_token);
 			$chprofile = curl_init($urlprofile);
 			curl_setopt($chprofile, CURLOPT_CUSTOMREQUEST, "POST");
 			curl_setopt($chprofile, CURLOPT_RETURNTRANSFER, true);
 			//curl_setopt($chprofile, CURLOPT_POSTFIELDS, $post);
 			curl_setopt($chprofile, CURLOPT_HTTPHEADER, $headersprofile);
-			curl_setopt($chprofile, CURLOPT_FOLLOWLOCATION, all);
-			$result = curl_exec($chprofile);
+			curl_setopt($chprofile, CURLOPT_FOLLOWLOCATION, 1);
+			$resultprofile = curl_exec($chprofile);
 			curl_close($chprofile);
-			$resultprofile = file_get_contents($result);
-			$eventsprofile = json_decode($resultprofile, true);
-			$displayname = $eventsprofile['displayName'];
 			if($event['message']['text'] == 'ไอดี') {
 				$text = $event['source']['userId'];
 			}else{
-				$text = 'สวัสดีครับ คุณ '.$eventsprofile.' ผมไม่เข้าใจคำถาม รบกวนส่งมาใหม่ครับ';
+				$text = 'สวัสดีครับ คุณ '.$resultprofile['displayName'].' ผมไม่เข้าใจคำถาม รบกวนส่งมาใหม่ครับ';
 			}
 			
 			// Get replyToken
@@ -41,7 +38,7 @@ if (!is_null($events['events'])) {
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
-				'text' => $text
+				'text' => $resultprofile
 			];
 
 			// Make a POST Request to Messaging API to reply to sender
