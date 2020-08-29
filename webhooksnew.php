@@ -46,3 +46,4 @@ function sendlinemesg(){
 	}
 }
 echo "OK";
+echo "result"$result;
