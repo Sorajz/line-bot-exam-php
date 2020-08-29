@@ -19,7 +19,7 @@ if (!is_null($events['events'])) {
 			$urlprofile = 'https://api.line.me/v2/bot/profile/'.$userida;
 			$headersprofile = array('Authorization: Bearer ' . $access_token);
 			$chprofile = curl_init($urlprofile);
-			curl_setopt($chprofile, CURLOPT_CUSTOMREQUEST, "POST");
+			curl_setopt($chprofile, CURLOPT_CUSTOMREQUEST, "GET");
 			curl_setopt($chprofile, CURLOPT_RETURNTRANSFER, true);
 			//curl_setopt($chprofile, CURLOPT_POSTFIELDS, $post);
 			curl_setopt($chprofile, CURLOPT_HTTPHEADER, $headersprofile);
