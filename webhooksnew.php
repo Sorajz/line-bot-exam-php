@@ -19,7 +19,7 @@ if (!is_null($events['events'])) {
 			if($event['message']['text'] == 'ไอดี') {
 				$text = $event['source']['userId'];
 			}else{
-				$text = 'ไม่เข้าใจถาม รบกวนส่งมาใหม่ครับ';
+				$text = 'สวัสดีครับ คุณ {Nickname} ผมไม่เข้าใจคำถาม รบกวนส่งมาใหม่ครับ';
 			}
 			
 			// Get replyToken
