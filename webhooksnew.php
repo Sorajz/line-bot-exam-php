@@ -54,7 +54,7 @@ if($_POST) {
 	$productName 		= $_POST['productN'];
 	$categoryName		=$_POST['categoryN'];
 	$sendnotify = "สวัสดีครับตอนนี้มี  รายการใหม่ให้เสนอ"."\r\n"."ชื่อสินค้า:".$productName."\r\n"."ประเภท:".$categoryName."\r\n";
-$valid['success'] = array('success' => false, 'messages' => array(),'productName' => array(),'categoryName'=> array());
+$valid['success'] = array('success' => true, 'messages' => array(),'productName' => array(),'categoryName'=> array());
 echo "message auto send person all<br>";
 $messages = [
 				'type' => 'text',
@@ -78,6 +78,8 @@ $messages = [
 			curl_close($ch);
 
 			echo $result . "\r\n";
+	$valid['success'] = true;
+	$valid['messages'] = "Successfully Notify Line ALL";
 echo "message end";
 	echo json_encode($valid);
 
