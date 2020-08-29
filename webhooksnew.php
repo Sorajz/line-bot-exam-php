@@ -16,10 +16,22 @@ if (!is_null($events['events'])) {
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			$userida = $event['source']['userId'];			
 			// Get text sent
+			$urlprofile = 'https://api.line.me/v2/bot/profile/'.$userida;
+			$headersprofile = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+			$chprofile = curl_init($url);
+			curl_setopt($chprofile, CURLOPT_CUSTOMREQUEST, "GET");
+			curl_setopt($chprofile, CURLOPT_RETURNTRANSFER, true);
+			curl_setopt($chprofile, CURLOPT_HTTPHEADER, $headersprofile);
+			curl_setopt($chprofile, CURLOPT_FOLLOWLOCATION, all);
+			curl_exec($chprofile);
+			curl_close($chprofile);
+			$resultprofile = file_get_contents($urlprofile);
+			$eventsprofile = json_decode($resultprofile, true);
+			$displayname = $eventsprofile['displayName'];
 			if($event['message']['text'] == 'ไอดี') {
 				$text = $event['source']['userId'];
 			}else{
-				$text = "สวัสดีครับ คุณ ".$userida." ผมไม่เข้าใจคำถาม รบกวนส่งมาใหม่ครับ";
+				$text = 'สวัสดีครับ คุณ '.$displayname.' ผมไม่เข้าใจคำถาม รบกวนส่งมาใหม่ครับ';
 			}
 			
 			// Get replyToken
