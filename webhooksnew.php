@@ -26,10 +26,11 @@ if (!is_null($events['events'])) {
 			curl_setopt($chprofile, CURLOPT_FOLLOWLOCATION, 1);
 			$resultprofile = curl_exec($chprofile);
 			curl_close($chprofile);
+			$displayname = $resultprofile["displayName"];
 			if($event['message']['text'] == 'ไอดี') {
 				$text = $event['source']['userId'];
 			}else{
-				$text = 'สวัสดีครับ คุณ '.$resultprofile['displayName'].' ผมไม่เข้าใจคำถาม รบกวนส่งมาใหม่ครับ';
+				$text = 'สวัสดีครับ คุณ '.$displayname.' ผมไม่เข้าใจคำถาม รบกวนส่งมาใหม่ครับ';
 			}
 			
 			// Get replyToken
