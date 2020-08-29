@@ -52,8 +52,9 @@ if (!is_null($events['events'])) {
 			echo $result . "\r\n";
 		}
 	}
-}
-echo "OK<br>";
+echo "OK 1 person <br>";
+}else{
+echo "OK ALL<br>";
 
 if($_POST) {
 	$productName 		= $_POST['productN'];
@@ -88,4 +89,5 @@ $messages = [
 echo "message end";
 	echo json_encode($valid);
 
+ }
 }
