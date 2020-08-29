@@ -49,10 +49,16 @@ if (!is_null($events['events'])) {
 	}
 }
 echo "OK<br>";
+
+if($_POST) {
+	$productName 		= $_POST['productN'];
+	$categoryName		=$_POST['categoryN'];
+	$sendnotify = "สวัสดีครับตอนนี้มี  รายการใหม่ให้เสนอ"."\r\n"."ชื่อสินค้า:".$productName."\r\n"."ประเภท:".$categoryName."\r\n";
+$valid['success'] = array('success' => false, 'messages' => array(),'productName' => array(),'categoryName'=> array());
 echo "message auto send person all<br>";
 $messages = [
 				'type' => 'text',
-				'text' => 'สวัสดี'
+				'text' => $sendnotify
 			];
 
 			// Make a POST Request to Messaging API to reply to sender
@@ -73,3 +79,6 @@ $messages = [
 
 			echo $result . "\r\n";
 echo "message end";
+	echo json_encode($valid);
+
+}
