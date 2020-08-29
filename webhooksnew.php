@@ -53,7 +53,7 @@ echo "message auto send person all"
 	// Get text sent
 			//$text = $event['source']['userId'];
 			// Get replyToken
-			$replyToken = $event['replyToken'];
+			//$replyToken = $event['replyToken'];
 
 			// Build message to reply back
 			$messages = [
