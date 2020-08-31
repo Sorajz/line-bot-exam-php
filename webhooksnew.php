@@ -28,7 +28,7 @@ if (!is_null($events['events'])) {
 			curl_close($chprofile);
 			$displayname = json_decode($resultprofile, true);
 			$displaynameshow = $displayname["displayName"];
-			if($event['message']['text'] == 'ไอดี') {
+			if($event['message']['text'] == 'ไอดี'|| $event['message']['text'] == 'id') {
 				$text = $event['source']['userId'];
 			}else{
 				$text = 'สวัสดีครับ คุณ '.$displaynameshow.' ผมไม่เข้าใจคำถาม รบกวนส่งมาใหม่ครับ';
