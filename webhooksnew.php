@@ -14,6 +14,7 @@ if (!is_null($events['events'])) {
 	foreach ($events['events'] as $event) {
 		// Reply only when message sent is in 'text' format
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
+			$dtext = 'รายละเอียดที่ คุณ '.$displaynameshow.'ขอมา';
 			$userida = $event['source']['userId'];			
 			// Get text sent
 			$urlprofile = 'https://api.line.me/v2/bot/profile/'.$userida;
@@ -28,10 +29,13 @@ if (!is_null($events['events'])) {
 			curl_close($chprofile);
 			$displayname = json_decode($resultprofile, true);
 			$displaynameshow = $displayname["displayName"];
-			if($event['message']['text'] == 'ไอดี'|| $event['message']['text'] == 'id') {
+			if($event['message']['text'] == 'ไอดี'|| $event['message']['text'] == 'id' ) {
+				$text = 'ID :'.$userida;
+			}else if($event['message']['text'] == 'Id'|| $event['message']['text'] == 'ID'|| $event['message']['text'] == 'iD' ) {
 				$text = $event['source']['userId'];
 			}else{
-				$text = 'สวัสดีครับ คุณ '.$displaynameshow.' ผมไม่เข้าใจคำถาม รบกวนส่งมาใหม่ครับ';
+				$dtext = 'สวัสดีครับ คุณ '.$displaynameshow;
+				$text = 'ผมไม่เข้าใจคำถาม รบกวนส่งมาใหม่ครับ';
 			}
 			
 			// Get replyToken
@@ -39,8 +43,13 @@ if (!is_null($events['events'])) {
 
 			// Build message to reply back
 			$messages = [
+				{
+				'type' => 'text',
+				'text' => $dtext
+				},{
 				'type' => 'text',
 				'text' => $text
+				}
 			];
 
 			// Make a POST Request to Messaging API to reply to sender
