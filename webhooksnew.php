@@ -14,7 +14,8 @@ if (!is_null($events['events'])) {
 	foreach ($events['events'] as $event) {
 		// Reply only when message sent is in 'text' format
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
-			$userida = $event['source']['userId'];			
+			$userida = $event['source']['userId'];
+			$message_user = $event['message']['text'];
 			// Get text sent
 			$urlprofile = 'https://api.line.me/v2/bot/profile/'.$userida;
 			$headersprofile = array('Authorization: Bearer ' . $access_token);
@@ -29,10 +30,13 @@ if (!is_null($events['events'])) {
 			$displayname = json_decode($resultprofile, true);
 			$displaynameshow = $displayname["displayName"];
 			$dtext = 'รายละเอียดที่ คุณ '.$displaynameshow.'ขอมา';
-			if($event['message']['text'] == 'ไอดี'|| $event['message']['text'] == 'id' ) {
+			if($message_user == 'ไอดี'|| $message_user == 'id' ) {
 				$text = $userida;
-			}else if($event['message']['text'] == 'Id'|| $event['message']['text'] == 'ID'|| $event['message']['text'] == 'iD' ) {
+			}else if($message_user == 'Id'|| $message_user == 'ID'|| $message_user == 'iD' ) {
 				$text = $event['source']['userId'];
+			}else if(strpos($message_user,'ควย')||strpos($message_user,'เหี้ย')||strpos($message_user,'สัส')||strpos($message_user,'มึง')||||strpos($message_user,'ควาย')){
+				$dtext = 'สวัสดีครับ คุณ '.$displaynameshow;
+				$text = 'รบกวนสุภาพหน่อยครับ';
 			}else{
 				$dtext = 'สวัสดีครับ คุณ '.$displaynameshow;
 				$text = 'ผมไม่เข้าใจคำถาม รบกวนส่งมาใหม่ครับ';
