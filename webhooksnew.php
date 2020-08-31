@@ -30,7 +30,7 @@ if (!is_null($events['events'])) {
 			$displaynameshow = $displayname["displayName"];
 			$dtext = 'รายละเอียดที่ คุณ '.$displaynameshow.'ขอมา';
 			if($event['message']['text'] == 'ไอดี'|| $event['message']['text'] == 'id' ) {
-				$text = 'ID :'.$userida;
+				$text = $userida;
 			}else if($event['message']['text'] == 'Id'|| $event['message']['text'] == 'ID'|| $event['message']['text'] == 'iD' ) {
 				$text = $event['source']['userId'];
 			}else{
