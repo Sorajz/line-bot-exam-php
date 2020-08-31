@@ -14,7 +14,6 @@ if (!is_null($events['events'])) {
 	foreach ($events['events'] as $event) {
 		// Reply only when message sent is in 'text' format
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
-			$dtext = 'รายละเอียดที่ คุณ '.$displaynameshow.'ขอมา';
 			$userida = $event['source']['userId'];			
 			// Get text sent
 			$urlprofile = 'https://api.line.me/v2/bot/profile/'.$userida;
@@ -29,6 +28,7 @@ if (!is_null($events['events'])) {
 			curl_close($chprofile);
 			$displayname = json_decode($resultprofile, true);
 			$displaynameshow = $displayname["displayName"];
+			$dtext = 'รายละเอียดที่ คุณ '.$displaynameshow.'ขอมา';
 			if($event['message']['text'] == 'ไอดี'|| $event['message']['text'] == 'id' ) {
 				$text = 'ID :'.$userida;
 			}else if($event['message']['text'] == 'Id'|| $event['message']['text'] == 'ID'|| $event['message']['text'] == 'iD' ) {
