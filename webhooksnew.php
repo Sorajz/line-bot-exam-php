@@ -35,10 +35,10 @@ if (!is_null($events['events'])) {
 			}else if($message_user == 'Id'|| $message_user == 'ID'|| $message_user == 'iD' ) {
 				$text = $event['source']['userId'];
 			}else{
-				if(strpos($message_user,'ควย')==TRUE||strpos($message_user,'เหี้ย')==TRUE||strpos($message_user,'สัส')==TRUE){
+				if(strpbrk($message_user,'ควย')==TRUE||strpbrk($message_user,'เหี้ย')==TRUE||strpbrk($message_user,'สัส')==TRUE){
 				$dtext = 'สวัสดีครับ คุณ '.$displaynameshow;
 				$text = 'รบกวนสุภาพหน่อยครับ';
-				}else if(strpos($message_user,'มึง')==TRUE||strpos($message_user,'ควาย')==TRUE){
+				}else if(strpbrk($message_user,'มึง')==TRUE||strpbrk($message_user,'ควาย')==TRUE){
 				$dtext = 'สวัสดีครับ คุณ '.$displaynameshow;
 				$text = 'รบกวนสุภาพหน่อยครับ';
 				}else{
