@@ -16,7 +16,7 @@ if (!is_null($events['events'])) {
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			$userida = $event['source']['userId'];
 			$message_user = $event['message']['text'];
-			// Get text sent
+			// Get profile user
 			$urlprofile = 'https://api.line.me/v2/bot/profile/'.$userida;
 			$headersprofile = array('Authorization: Bearer ' . $access_token);
 			$chprofile = curl_init($urlprofile);
@@ -25,21 +25,26 @@ if (!is_null($events['events'])) {
 			//curl_setopt($chprofile, CURLOPT_POSTFIELDS, $post);
 			curl_setopt($chprofile, CURLOPT_HTTPHEADER, $headersprofile);
 			curl_setopt($chprofile, CURLOPT_FOLLOWLOCATION, 1);
-			$resultprofile = curl_exec($chprofile);
-			curl_close($chprofile);
-			$displayname = json_decode($resultprofile, true);
-			$displaynameshow = $displayname["displayName"];
+			$resultprofile = curl_exec($chprofile); //แสดงค่าออกมาแล้วเก็บไว้ที่ตัวแปร $resultprofile
+			curl_close($chprofile);//จบการทำงานการดึงค่าจากเว็ป
+			$displayname = json_decode($resultprofile, true);//แปลงค่าตัวแปร $resultprofile เป็น json แล้วเก็บไว้ที่ตัวแปร $displayname
+			$displaynameshow = $displayname["displayName"];// 
 			$dtext = 'รายละเอียดที่ คุณ '.$displaynameshow.'ขอมา';
 			if($message_user == 'ไอดี'|| $message_user == 'id' ) {
 				$text = $userida;
 			}else if($message_user == 'Id'|| $message_user == 'ID'|| $message_user == 'iD' ) {
 				$text = $event['source']['userId'];
-			}else if(strpos($message_user,'ควย')||strpos($message_user,'เหี้ย')||strpos($message_user,'สัส')||strpos($message_user,'มึง')||strpos($message_user,'ควาย')){
+			}else{
+				if(strpos($message_user,'ควย')==TRUE||strpos($message_user,'เหี้ย')==TRUE||strpos($message_user,'สัส')==TRUE){
 				$dtext = 'สวัสดีครับ คุณ '.$displaynameshow;
 				$text = 'รบกวนสุภาพหน่อยครับ';
-			}else{
+				}else if(strpos($message_user,'มึง')==TRUE||strpos($message_user,'ควาย')==TRUE){
+				$dtext = 'สวัสดีครับ คุณ '.$displaynameshow;
+				$text = 'รบกวนสุภาพหน่อยครับ';
+				}else{
 				$dtext = 'สวัสดีครับ คุณ '.$displaynameshow;
 				$text = 'ผมไม่เข้าใจคำถาม รบกวนส่งมาใหม่ครับ';
+				}
 			}
 			
 			// Get replyToken
