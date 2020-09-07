@@ -97,8 +97,8 @@ $messages = [
 			];
 $messageslogin = [
 				'type' => 'uri',
-				'label' => "Login",
-				'uri' => 'https//127.0.0.1:4433'
+				'label' => 'Login',
+				'uri' => 'https://127.0.0.1:4433'
 			];
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/broadcast';
