@@ -95,11 +95,14 @@ $messages = [
 				'type' => 'text',
 				'text' => $sendnotify
 			];
-
+$messageslogin = [
+				'type' => 'text',
+				'text' => "https//127.0.0.1:4433"
+			];
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/broadcast';
 			$data = [
-				'messages' => [$messages],
+				'messages' => [$messages,$messageslogin],
 			];
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
