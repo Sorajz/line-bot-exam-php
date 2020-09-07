@@ -98,8 +98,8 @@ $messages = [
 $messageslogin = [
 				'type' => 'uri',
 				'label' => 'Login',
-				'uri' => 'https://127.0.0.1:4433',
-				'altUri' => ['desktop' =>'https://127.0.0.1:4433']
+				'uri' => 'https://127.0.0.1:4433/test',
+				'altUri' => ['desktop' =>'https://127.0.0.1:4433/test']
 			];
 	$messageslogint = [
 				'type' => 'text',
