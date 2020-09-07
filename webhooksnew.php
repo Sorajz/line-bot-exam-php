@@ -88,28 +88,22 @@ echo "OK ALL<br>";
 if(!is_null($_POST['productN'])) {
 	$productName 		= $_POST['productN'];
 	$categoryName		=$_POST['categoryN'];
-	$sendnotify = "สวัสดีครับตอนนี้มี  รายการใหม่ให้เสนอ"."\r\n"."ชื่อสินค้า:".$productName."\r\n"."ประเภท:".$categoryName."\r\n";
+	$sendnotify = "สวัสดีครับตอนนี้มี  รายการใหม่ให้เสนอ"."\r\n"."ชื่อสินค้า:".$productName."\r\n"."ประเภท:".$categoryName;
 $valid['success'] = array('success' => true, 'messages' => array(),'productName' => array(),'categoryName'=> array());
 echo "message auto send person all<br>";
 $messages = [
 				'type' => 'text',
 				'text' => $sendnotify
 			];
-$messageslogin = [
-				'type' => 'uri',
-				'label' => 'Login',
-				'uri' => 'https://127.0.0.1:4433/test',
-				'altUri' => ['desktop' =>'https://127.0.0.1:4433/test']
-			];
-	$messageslogint = [
+	$messageslogin = [
 				'type' => 'text',
 				'text' => 'https://127.0.0.1:4433'
 			];
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/broadcast';
 			$data = [
-				'messages' => [$messages,$messageslogint],
-				'action' => [$messageslogin],
+				'messages' => [$messages,$messageslogin],
+				
 			];
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
