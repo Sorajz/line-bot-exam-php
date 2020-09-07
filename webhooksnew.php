@@ -97,7 +97,7 @@ $messages = [
 			];
 $messageslogin = [
 				'type' => 'uri',
-				'label': "Login",
+				'label' => "Login",
 				'uri' => 'https//127.0.0.1:4433'
 			];
 			// Make a POST Request to Messaging API to reply to sender
