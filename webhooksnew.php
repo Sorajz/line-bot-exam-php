@@ -123,4 +123,46 @@ echo "message all end";
 	echo json_encode($valid);
 
  }
+	//แจ้งเตือนรายการที่สั่ง
+	if(!is_null($_POST['useridline'])) {
+	$productName 		= $_POST['productN'];
+	$categoryName		=$_POST['categoryN'];
+	$sendnotify = "สวัสดีครับตอนนี้มี  รายการใหม่ให้เสนอ"."\r\n"."ชื่อสินค้า:".$productName."\r\n"."ประเภท:".$categoryName;
+$valid['success'] = array('success' => true, 'messages' => array(),'productName' => array(),'categoryName'=> array());
+echo "message auto send person all<br>";
+		
+	// Get replyToken
+			$replyToken = $_POST['useridline'];
+$messages = [
+				'type' => 'text',
+				'text' => $sendnotify
+			];
+	$messageslogin = [
+				'type' => 'text',
+				'text' => 'https://127.0.0.1:4433'
+			];
+			// Make a POST Request to Messaging API to reply to sender
+			$url = 'https://api.line.me/v2/bot/message/broadcast';
+			$data = [
+				'replyToken' => $replyToken,
+				'messages' => [$messages,$messageslogin],
+			];
+			$post = json_encode($data);
+			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+			$ch = curl_init($url);
+			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+			curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, all);
+			$result = curl_exec($ch);
+			curl_close($ch);
+
+			echo $result . "\r\n";
+	$valid['success'] = true;
+	$valid['messages'] = "Successfully Notify Line ALL";
+echo "message all end";
+	echo json_encode($valid);
+
+ }
 }
