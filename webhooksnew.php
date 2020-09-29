@@ -124,15 +124,14 @@ echo "message all end";
 
  }
 	//แจ้งเตือนรายการที่สั่ง
-	if(!is_null($_POST['useridline'])) {
-	$productName 		= $_POST['productN'];
-	$categoryName		=$_POST['categoryN'];
-	$sendnotify = "สวัสดีครับตอนนี้มี  รายการใหม่ให้เสนอ"."\r\n"."ชื่อสินค้า:".$productName."\r\n"."ประเภท:".$categoryName;
+	if(!is_null($_POST['polineuserid'])&&!is_null($_POST['poallproduct'])) {
+	$productName 		= $_POST['poallproduct'];
+	$sendnotify = "สวัสดีครับตอนนี้มี รายการสั่งซื้อใหม่"."\r\n"."ชื่อสินค้า:".$productName."\r\n";
 $valid['success'] = array('success' => true, 'messages' => array(),'productName' => array(),'categoryName'=> array());
 echo "message auto send person all<br>";
 		
 	// Get replyToken
-			$replyToken = $_POST['useridline'];
+			$replyToken = $_POST['polineuserid'];
 $messages = [
 				'type' => 'text',
 				'text' => $sendnotify
