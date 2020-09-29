@@ -126,7 +126,8 @@ echo "message all end";
 	//แจ้งเตือนรายการที่สั่ง
 	if(!is_null($_POST['polineuserid'])&&!is_null($_POST['poallproduct'])) {
 	$productName 		= $_POST['poallproduct'];
-	$sendnotify = "สวัสดีครับตอนนี้มี รายการสั่งซื้อใหม่"."\r\n"."ชื่อสินค้า:".$productName."\r\n";
+	$poid = $_POST['poid'];
+	$sendnotify = "สวัสดีครับตอนนี้มี รายการสั่งซื้อใหม่"."\r\n"."รหัสสั่งซื้อ:".$poid."\r\n"."ชื่อสินค้า:".$productName."\r\n";
 $valid['success'] = array('success' => true, 'messages' => array(),'productName' => array(),'categoryName'=> array());
 echo "message auto send person all<br>";
 		
