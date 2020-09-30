@@ -49,7 +49,6 @@ if (!is_null($events['events'])) {
 			
 			// Get replyToken
 			$replyToken = $event['replyToken'];
-
 			// Build message to reply back
 			$dmessages = [
 				'type' => 'text',
@@ -59,7 +58,6 @@ if (!is_null($events['events'])) {
 				'type' => 'text',
 				'text' => $text	
 			];
-
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
@@ -124,16 +122,13 @@ echo "message all end";
 
  }
 	//แจ้งเตือนรายการที่สั่ง
-	if(!is_null($_POST['polineuserid'])&&!is_null($_POST['poallproduct'])) {
+	if(!is_null($_POST['polineuserid'])) {
 	$codeuseridline = $_POST['polineuserid'];
-	$productName 		= $_POST['poallproduct'];
+	$productorderpo = $_POST['poallproduct'];
 	$poid = $_POST['poid'];
-	$sendnotify = "สวัสดีครับตอนนี้มี รายการสั่งซื้อใหม่"."\r\n"."รหัสสั่งซื้อ:".$poid."\r\n"."ชื่อสินค้า:".$productName."\r\n";
-$valid['success'] = array('success' => true, 'messages' => array(),'productName' => array(),'categoryName'=> array());
-echo "message auto send person all<br>";
+	$sendnotify = "สวัสดีครับตอนนี้มี รายการสั่งซื้อใหม่"."\r\n"."รหัสสั่งซื้อ:".$poid."\r\n"."ชื่อสินค้า:".$productorderpo;
 		// Get replyToken
 			$replyToken = $codeuseridline;
-
 			// Build message to reply back
 			$dmessages = [
 				'type' => 'text',
@@ -143,7 +138,6 @@ echo "message auto send person all<br>";
 				'type' => 'text',
 				'text' => $text	
 			];
-
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
@@ -152,7 +146,6 @@ echo "message auto send person all<br>";
 			];
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
-
 			$ch = curl_init($url);
 			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
