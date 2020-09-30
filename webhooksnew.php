@@ -125,30 +125,34 @@ echo "message all end";
  }
 	//แจ้งเตือนรายการที่สั่ง
 	if(!is_null($_POST['polineuserid'])&&!is_null($_POST['poallproduct'])) {
+	$codeuseridline = $_POST['polineuserid'];
 	$productName 		= $_POST['poallproduct'];
 	$poid = $_POST['poid'];
 	$sendnotify = "สวัสดีครับตอนนี้มี รายการสั่งซื้อใหม่"."\r\n"."รหัสสั่งซื้อ:".$poid."\r\n"."ชื่อสินค้า:".$productName."\r\n";
 $valid['success'] = array('success' => true, 'messages' => array(),'productName' => array(),'categoryName'=> array());
 echo "message auto send person all<br>";
-		
-	// Get replyToken
-			$replyToken = $_POST['polineuserid'];
-$messages = [
+		// Get replyToken
+			$replyToken = $codeuseridline;
+
+			// Build message to reply back
+			$dmessages = [
 				'type' => 'text',
 				'text' => $sendnotify
-			];
-	$messageslogin = [
+				];
+			$messages = [
 				'type' => 'text',
-				'text' => 'https://127.0.0.1:4433'
+				'text' => $text	
 			];
+
 			// Make a POST Request to Messaging API to reply to sender
-			$url = 'https://api.line.me/v2/bot/message/broadcast';
+			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
 				'replyToken' => $replyToken,
-				'messages' => [$messages,$messageslogin],
+				'messages' => [$dmessages,$messages],
 			];
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+
 			$ch = curl_init($url);
 			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -157,12 +161,7 @@ $messages = [
 			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, all);
 			$result = curl_exec($ch);
 			curl_close($ch);
-
-			echo $result . "\r\n";
-	$valid['success'] = true;
-	$valid['messages'] = "Successfully Notify Line ALL";
-echo "message all end";
-	echo json_encode($valid);
+		
 
  }
 }
