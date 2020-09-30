@@ -80,7 +80,7 @@ if (!is_null($events['events'])) {
 		}
 	}
 echo "OK 1 person <br>";
-}else{
+}
 echo "OK ALL<br>";
 
 if(!is_null($_POST['productN'])) {
@@ -122,10 +122,11 @@ echo "message all end";
 
  }
 	//แจ้งเตือนรายการที่สั่ง
-	if(!is_null($_POST['polineuserid'])) {
+if(!is_null($_POST['polineuserid'])) {
 	$codeuseridline = $_POST['polineuserid'];
 	$productorderpo = $_POST['poallproduct'];
 	$poid = $_POST['poid'];
+	$validpo['success'] = array('success' => true, 'messages' => array());
 	$sendnotify = "สวัสดีครับตอนนี้มี รายการสั่งซื้อใหม่"."\r\n"."รหัสสั่งซื้อ:".$poid."\r\n"."ชื่อสินค้า:".$productorderpo;
 		// Get replyToken
 			$replyToken = $codeuseridline;
@@ -154,7 +155,8 @@ echo "message all end";
 			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, all);
 			$result = curl_exec($ch);
 			curl_close($ch);
-		
+	$validpo['success'] = true;
+	$validpo['messages'] = "Successfully Notify Line Supplier";
+		echo json_encode($validpo);
 
  }
-}
