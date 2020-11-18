@@ -48,8 +48,8 @@ if (!is_null($events['events'])) {
 			}
 			
 			// Get replyToken
-			$replyToken = $event['replyToken']; //ค่าเริ่มต้น
-			//$replyToken = U10655b4870ee3cc88b6c8681e7dfe680;
+			//$replyToken = $event['replyToken']; //ค่าเริ่มต้น
+			$replyToken = 'U10655b4870ee3cc88b6c8681e7dfe680';
 			// Build message to reply back
 			$dmessages = [
 				'type' => 'text',
