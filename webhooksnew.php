@@ -88,7 +88,7 @@ if(!is_null($_POST['productN'])) {
 	$categoryName		=$_POST['categoryN'];
 	$MTextA		=$_POST['MTextA'];
 	$MTextB		=$_POST['MTextB'];
-	$sendnotify = $MTextA."\r\n"."ชื่อสินค้า:".$productName."\r\n".$MTextB.$categoryName;
+	$sendnotify = $MTextA.$productName."\r\n".$MTextB.$categoryName;
 $valid['success'] = array('success' => true, 'messages' => array(),'productName' => array(),'categoryName'=> array());
 echo "message auto send person all<br>";
 $messages = [
