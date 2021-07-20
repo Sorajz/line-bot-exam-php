@@ -86,7 +86,9 @@ echo "OK ALL<br>";
 if(!is_null($_POST['productN'])) {
 	$productName 		= $_POST['productN'];
 	$categoryName		=$_POST['categoryN'];
-	$sendnotify = "สวัสดีครับตอนนี้มี  รายการใหม่ให้เสนอ"."\r\n"."ชื่อสินค้า:".$productName."\r\n"."ประเภท:".$categoryName;
+	$MTextA		=$_POST['MTextA'];
+	$MTextB		=$_POST['MTextB'];
+	$sendnotify = $MTextA."\r\n"."ชื่อสินค้า:".$productName."\r\n".$MTextB.$categoryName;
 $valid['success'] = array('success' => true, 'messages' => array(),'productName' => array(),'categoryName'=> array());
 echo "message auto send person all<br>";
 $messages = [
