@@ -171,5 +171,7 @@ if(!is_null($_POST['polineuserid'])) {
 
  }
 
+}else{
+echo "ไม่มีโพลต์ข้อมูล";
 }
 ?>
