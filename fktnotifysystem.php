@@ -2,8 +2,12 @@
 
 require "vendor/autoload.php";
 require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
-$_POST['access_token'];
-$access_token = 'GrPGyVxRxwkpKh0yebc4WmyhLwRU8Ry1+1hjIRo3YimFR6JMGll2XSGcGXRfVlJ7K/9rHxdKzcR7QTS5u1KqekjoNv/3Y+KwlRpgDYXIrjjNwA/WFJvenr2NzqEbgjnQ5pdFDHiPMzQVMQiZ9kez8gdB04t89/1O/w1cDnyilFU=';
+//$_POST['access_token'];
+//$access_token = 'GrPGyVxRxwkpKh0yebc4WmyhLwRU8Ry1+1hjIRo3YimFR6JMGll2XSGcGXRfVlJ7K/9rHxdKzcR7QTS5u1KqekjoNv/3Y+KwlRpgDYXIrjjNwA/WFJvenr2NzqEbgjnQ5pdFDHiPMzQVMQiZ9kez8gdB04t89/1O/w1cDnyilFU=';
+
+if(isset($_POST['access_token'])){
+    $access_token = $_POST['access_token']; //access_token main
+
 // Get POST body content
 $content = file_get_contents('php://input');
 // Parse JSON
@@ -48,7 +52,11 @@ if (!is_null($events['events'])) {
 			}
 			
 			// Get replyToken
-			$replyToken = $event['replyToken'];
+            if($_POST['reply_token']){
+                $replyToken = $_POST['reply_token'];
+            }else{
+			    $replyToken = $event['replyToken'];
+            }
 			// Build message to reply back
 			$dmessages = [
 				'type' => 'text',
@@ -79,7 +87,7 @@ if (!is_null($events['events'])) {
 			//echo $result . "\r\n";
 		}
 	}
-echo "OK 1 person <br>";
+    echo "OK 1 person <br>";
 }
 echo "OK ALL<br>";
 
@@ -89,9 +97,9 @@ if(!is_null($_POST['productN'])) {
 	$MTextA		=$_POST['MTextA'];
 	$MTextB		=$_POST['MTextB'];
 	$sendnotify = $MTextA.$productName."\r\n".$MTextB.$categoryName;
-$valid['success'] = array('success' => true, 'messages' => array(),'productName' => array(),'categoryName'=> array());
-echo "message auto send person all<br>";
-$messages = [
+    $valid['success'] = array('success' => true, 'messages' => array(),'productName' => array(),'categoryName'=> array());
+    echo "message auto send person all<br>";
+    $messages = [
 				'type' => 'text',
 				'text' => $sendnotify
 			];
@@ -119,7 +127,7 @@ $messages = [
 			echo $result . "\r\n";
 	$valid['success'] = true;
 	$valid['messages'] = "Successfully Notify Line ALL";
-echo "message all end";
+    echo "message all end";
 	echo json_encode($valid);
 
  }
@@ -162,4 +170,6 @@ if(!is_null($_POST['polineuserid'])) {
 		echo json_encode($validpo);
 
  }
+
+}
 ?>
